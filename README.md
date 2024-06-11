@@ -10,10 +10,8 @@ exclude: true
 Here I semi-regularly post updates and technical documentation for my personal/class projects. Navigate to a specific project page using the links at the top of the page. If you have any questions, comments, or file requests, feel free to reach out using my contact info at the bottom of this page.
 
 ## Contact Information
-[Martin Susanto](https://github.com/Martin5009)
 
-mardansus@gmail.com
+**Email:** mardansus@gmail.com
 
-**LinkedIn:**
-<https://www.linkedin.com/in/martin-susanto-310721235/>
+**LinkedIn:** <https://www.linkedin.com/in/martin-susanto-310721235/>
 
