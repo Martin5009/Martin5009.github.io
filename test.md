@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Test Title
-permalink: /
-exclude: true
+permalink: /test_title/
 ---
 
 # Test Header
