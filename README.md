@@ -6,7 +6,7 @@ exclude: true
 ---
 
 <div style="text-align: center">
-  <img src="../assets/cabinet_banner.jpg" alt="logo" width="700" />
+  <img src="./assets/cabinet_banner.jpg" alt="logo" width="700" />
 </div>
 
 ### Welcome to my page! 
