@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Project Overview
+title: Test Title
 permalink: /
 exclude: true
 ---
 
-# test header
-test text
+# Test Header
+Test text.
