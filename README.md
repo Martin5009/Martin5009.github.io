@@ -1,9 +1,18 @@
 ---
 layout: page
-title: Project Overview
+title: Home
 permalink: /
 exclude: true
 ---
 
-# Project Abstract
-After creating a very real company called LAMARCE, the team focused on the creation of an arcade game complete with a Wii Nunchuk controller, LED matrix, and a wooden case to house all hardware in a clean and fun way. The team was inspired by video game arcades and wanted to understand how they work. So, the team created a simple, timed maze game inspired by the arcade game "Flamin' Finger." External peripherals such as the Wii Nunchuk and LED matrix were purchased while hardware like an STM23 Nucleo-32 Microcontroller Unit (MCU) and an iCE40 UP5K Field Programmable Gate Array (FPGA) were repurposed from Harvey Mudd College's engineering course on microprocessors. The team learned how to make all of these components work together and gained experience implementing communication protocols like Inter-Integrated Circuit (I2C) and Serial Peripheral Interface (SPI).
+## Welcome to my page! 
+
+Here I semi-regularly post updates and technical documentation for my personal/class projects. Navigate to a specific project page using the links at the top of the page. If you have any questions, comments, or file requests, feel free to reach out using my contact info at the bottom of this page.
+
+## Contact Information
+[Martin Susanto](https://github.com/Martin5009)
+mardansus@gmail.com
+
+**LinkedIn:**
+<https://www.linkedin.com/in/martin-susanto-310721235/>
+
