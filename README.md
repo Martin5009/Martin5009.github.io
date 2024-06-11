@@ -10,6 +10,7 @@ exclude: true
   <img src="../assets/cabinet_banner.jpg" alt="logo" width="700" />
 </div>
 
+  
 
 ### Welcome to my page! 
 
