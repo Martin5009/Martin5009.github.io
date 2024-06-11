@@ -11,6 +11,7 @@ Here I semi-regularly post updates and technical documentation for my personal/c
 
 ## Contact Information
 [Martin Susanto](https://github.com/Martin5009)
+
 mardansus@gmail.com
 
 **LinkedIn:**
