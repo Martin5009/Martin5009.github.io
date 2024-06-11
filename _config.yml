@@ -4,9 +4,7 @@ author: "Martin Susanto"
 theme: minima
 
 header-pages:
-  - design.html
-  - documentation.html
-  - resources.html
+  - test.html
 
 
 # Github Pages settings that cannot be changed
