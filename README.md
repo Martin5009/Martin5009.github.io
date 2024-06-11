@@ -10,6 +10,7 @@ exclude: true
   <img src="../assets/cabinet_banner.jpg" alt="logo" width="700" />
 </div>
 <br/>
+
 ### Welcome to my page! 
 
 Here I semi-regularly post updates and technical documentation for my personal/class projects. Most of the projects I post will be electronics or engineering related, Navigate to a specific project page using the links at the top of the page. If you have any questions, comments, or file requests, feel free to reach out using my contact info at the bottom of this page.
