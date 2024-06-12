@@ -15,7 +15,7 @@ Summary text goes here. I talk about the whole system and which parts I was invo
 
 Fig 2. Timing diagram for the DE-DP14112 LED matrix. 
   
-  The purpose of the FPGA is to receive a message over SPI from the MCU written using the communication standard defined earlier in this report, and to translate that SPI message into one following this custom protocol, which includes the proper bits, timing, and chip multiplexing. The digital circuit design, shown in Figure 4, follows the architecture of a processor, with a single controller managing the rest of the subcircuits through control signals. The state transition diagram for the controller is shown in Figure 3. 
+  The purpose of the FPGA is to receive a message over SPI from the MCU, and to translate that SPI message into one following this custom protocol. The alternative to using the FPGA would be to bit-bang this custom protocol on the MCU, but that would likely limit the functionalities I could include in the arcade game since the processor would spend most of its time and energy just sending messages to the FPGA. Thus, I designed a digital circuit at the register transfer level (RTL) shown in Figure 4, which uses the architecture where a single controller manages the rest of the subcircuits through control signals. The state transition diagram for the controller is shown in Figure 3. I then programmed my ICE40UP5K FPGA to run this circuit using SystemVerilog.
 
 <div style="text-align: left">
   <img src="../assets/FPGA_controller_FSM.jpeg" alt="logo1" width="900" />
@@ -30,10 +30,9 @@ Fig 3. Finite state machine controller for the FPGA DE-DP14112 driver.
 
 Fig 4. Block diagram for the FPGA DE-DP14112 driver.
 
-
 # MCU-to-FPGA Communication Standard
 
-Communication between the MCU and FPGA occurs through 16-bit SPI transactions. The ID bit contains the operation type. The purpose of the remaining bits varies depending on whether the operation is a write or a command.
+  To allow the MCU and FPGA to communicate over SPI, I defined the following 16-bit message format. Each message starts with an ID bit which contains the operation type. The purpose of the remaining bits varies depending on whether the operation is a write or a configuration command.
 
 <p align="center">
   ID0 - B14 B13 B12 B11 B10 B9 B8 B7 B6 B5 B4 B3 B2 B1 B0
