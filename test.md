@@ -5,10 +5,8 @@ permalink: /cabinet/
 ---
 
 # Demo Video
-  <a style="text-align: left" 
-     href="http://www.youtube.com/watch?feature=player_embedded&v=Ub9kcxQgXCU" 
-     target="_blank">
-     <img src="http://img.youtube.com/vi/Ub9kcxQgXCU/0.jpg" alt="logo" width="500"/>
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=Ub9kcxQgXCU" target="_blank">
+     <img src="http://img.youtube.com/vi/Ub9kcxQgXCU/0.jpg" alt="logo" width="500" style="text-align: left"/>
   </a>
 
 # Summary
