@@ -6,7 +6,7 @@ permalink: /cabinet/
 
 Summary text goes here. I talk about the whole system and which parts I was involved in most. Below here I describe my technical work in greater detail.
 
-# FPGA Design
+# Problem Statement
   The LED matrix uses its own custom SPI-like communication protocol, shown in Figure 2. The matrix has four pins: CLK, CS, WR, and DATA. The DATA and WR pins act like the SDI and SCL pins from SPI, where data is written serially over DATA on the rising edge of WR to the matrix's internal memory. The CLK and CS pins require a bit more explanation. The matrix contains four HT1632C LED driver chips, each of which controls a fourth of the display. Displaying an image on the matrix involves writing the proper bits to each of the four chips, and the CLK and CS pins allows one to select which chip to write to. CLK and CS are wired to the CP and DSA pins of a 74HC164 shift register, and the chip select pins of the four HT1632C chips are wired to the Q0, Q1, Q2, and Q3 pins. 
 
 <div style="text-align: left">
@@ -14,8 +14,9 @@ Summary text goes here. I talk about the whole system and which parts I was invo
 </div>
 
 Fig 2. Timing diagram for the DE-DP14112 LED matrix. 
-  
-  The purpose of the FPGA is to receive a message over SPI from the MCU, and to translate that SPI message into one following this custom protocol. The alternative to using the FPGA would be to bit-bang this custom protocol on the MCU, but that would likely limit the functionalities I could include in the arcade game since the processor would spend most of its time and energy just sending messages to the FPGA. Thus, I designed a digital circuit at the register transfer level (RTL) shown in Figure 4, which uses the architecture where a single controller manages the rest of the subcircuits through control signals. The state transition diagram for the controller is shown in Figure 3. I then programmed my ICE40UP5K FPGA to run this circuit using SystemVerilog.
+
+# So why the FPGA?
+  The purpose of the FPGA is to receive a message over SPI from the MCU, and to translate that SPI message into one following this custom protocol. The alternative to using the FPGA would be to bit-bang this custom protocol on the MCU, but that would likely limit the functionalities I could include in the arcade game since the processor would spend most of its time and energy just sending messages to the FPGA. To allow me to take full advantage of the MCU's hardware SPI peripheral, I designed a digital circuit at the register transfer level (RTL) shown in Figure 4, which uses the architecture where a single controller manages the rest of the subcircuits through control signals. The state transition diagram for the controller is shown in Figure 3. I then programmed my ICE40UP5K FPGA to run this circuit using SystemVerilog.
 
 <div style="text-align: left">
   <img src="../assets/FPGA_controller_FSM.jpeg" alt="logo1" width="900" />
