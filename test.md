@@ -4,7 +4,20 @@ title: Model Arcade Cabinet
 permalink: /cabinet/
 ---
 
-Summary text goes here. I talk about the whole system and which parts I was involved in most. Below here I describe my technical work in greater detail.
+# Demo Video
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Ub9kcxQgXCU
+" target="_blank"><img src="http://img.youtube.com/vi/Ub9kcxQgXCU/0.jpg" 
+alt="logo" width="240" height="180" border="10" /></a>
+
+# Summary
+  As part of an embedded systems course, I and two of my friends constructed a 1/5 scale arcade cabinet using an STM32L432KC microcontroller and an ICE40UP5K FPGA. As shown in Figure 1, the project involved integrating together five digital systems: an MCU, FPGA, LED matrix, speaker, and Wii Nunchuk controller. I was solely responsible for interfacing the FPGA, LED matrix, and speaker with the MCU, so I will mostly speak to that part of the project. 
+
+<div style="text-align: left">
+  <img src="../assets/schematics/E155 Labs - Project System Block Diagram.jpeg" alt="logo" width="900" />
+</div>
+
+Fig 1. System-level block diagram, including the Wii Nunchuk, MCU, FPGA, LED Matrix, and speaker.
 
 # Problem Statement
   The LED matrix uses its own custom SPI-like communication protocol, shown in Figure 2. The matrix has four pins: CLK, CS, WR, and DATA. The DATA and WR pins act like the SDI and SCL pins from SPI, where data is written serially over DATA on the rising edge of WR to the matrix's internal memory. The CLK and CS pins require a bit more explanation. The matrix contains four HT1632C LED driver chips, each of which controls a fourth of the display. Displaying an image on the matrix involves writing the proper bits to each of the four chips, and the CLK and CS pins allows one to select which chip to write to. CLK and CS are wired to the CP and DSA pins of a 74HC164 shift register, and the chip select pins of the four HT1632C chips are wired to the Q0, Q1, Q2, and Q3 pins. 
@@ -51,7 +64,7 @@ Write messages consist of position bits X[4:0] and Y[1:0], green LED control bit
 0 - R3 R2 R1 R0 - G3 G2 G1 G0 - Y1 Y0 - X4 X3 X2 X1 X0
 </p>
 
-As shown in Figure 5, the display is split into columns of four LEDs, where each LED in the column can be independently controlled. The write operation is used to control the LEDs in one of these columns, either by toggling them on/off, or by changing their color. The position bits X[4:0] and Y[1:0] define the (x, y) location of this column, defining (0, 0) to be at the top left of the display. The color bits R[3:0] and G[3:0] toggle the red and green LEDs respectively on each column. 
+As shown in Figure 5, the display is split into columns of four LEDs, where each LED in the column can be independently controlled. The write operation is used to control the LEDs in one of these columns, either by toggling them on/off or by changing their color. The position bits X[4:0] and Y[1:0] define the (x, y) location of this column, defining (0, 0) to be at the top left of the display. The color bits R[3:0] and G[3:0] toggle the red and green LEDs respectively on each column. 
 
 **X[4:0]: Control Location X**  
 These bits are used to define the x-coordinate location of the column to be controlled, defining x = 0 as the left edge of the display.
@@ -88,3 +101,12 @@ The command operation is used to control system-level functionalities of the dis
 | LED On        | 0000-0011-xxxxxxx | Turn on LED duty cycle generator   |
 
 Table 2. Command codes for toggling various system-level functionalities.
+
+# Pictures
+
+<div style="text-align: center">
+  <img src="../assets/cabinet_1.jpg" alt="logo1" width="800" />
+</div>
+<div style="text-align: center">
+  <img src="../assets/cabinet_2.jpg" alt="logo1" width="800" />
+</div>
