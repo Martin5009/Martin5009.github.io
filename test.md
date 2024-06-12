@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Model Arcade Cabinet
-permalink: /test_title/
+permalink: /cabinet/
 ---
 
 Summary text goes here. I talk about the whole system and which parts I was involved in most. Below here I describe my technical work in greater detail.
