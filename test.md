@@ -24,7 +24,6 @@ Fig 2. Timing diagram for the DE-DP14112 LED matrix.
 
 Fig 3. Finite state machine controller for the FPGA DE-DP14112 driver.
 
-## FPGA Block Diagram
 <div style="text-align: left">
   <img src="../assets/FPGA_block_diagram.jpeg" alt="logo1" width="900" />
 </div>
