@@ -5,11 +5,11 @@ permalink: /cabinet/
 ---
 
 # Demo Video
-<div style="text-align: left">
-  <a href="http://www.youtube.com/watch?feature=player_embedded&v=Ub9kcxQgXCU
-  " target="_blank"><img src="http://img.youtube.com/vi/Ub9kcxQgXCU/0.jpg" 
-  alt="logo" width="500"/></a>
-</div>
+  <a style="text-align: left" 
+     href="http://www.youtube.com/watch?feature=player_embedded&v=Ub9kcxQgXCU" 
+     target="_blank">
+     <img src="http://img.youtube.com/vi/Ub9kcxQgXCU/0.jpg" alt="logo" width="500"/>
+  </a>
 
 # Summary
   As part of an embedded systems course, I and two of my friends constructed a 1/5 scale arcade cabinet using an STM32L432KC microcontroller and an ICE40UP5K FPGA. As shown in Figure 1, the project involved integrating together five digital systems: an MCU, FPGA, LED matrix, speaker, and Wii Nunchuk controller. I was solely responsible for interfacing the FPGA, LED matrix, and speaker with the MCU, so I will mostly speak to that part of the project. 
