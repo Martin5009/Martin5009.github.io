@@ -17,7 +17,7 @@ Here I semi-regularly post updates and technical documentation for my personal/c
 
 ### Who am I?
 
-I am Martin, a recent electrical engineering graduate and electronics hobbyist. I'm currently seeking entry-level industry work in FPGA/digital design, with the eventual goal of designing application-specific integrated circuits (ASICs) after getting some well-needed industry experience. On a more personal note, I've recently picked up designing electronics as a hobby. Right now I'm designing a digital delay pedal for electric guitar using an FPGA, and I'll be posting demo videos here soon, so keep a lookout if you are interested! Outside of electronics work, you may also find me producing music or playing badminton at the local courts. 
+I am Martin, a recent electrical engineering graduate and electronics hobbyist. I'm currently seeking entry-level work as an electrical engineer, with the goal of designing application-specific integrated circuits (ASICs) after getting some well-needed experience. I've recently picked up designing electronics as a hobby. Right now I'm designing a digital delay pedal for electric guitar using an FPGA, and I'll be posting demo videos here soon, so keep a lookout if you are interested. Outside of electronics work, you may also find me producing music or playing badminton at the local courts. 
 
 ### Contact Information
 
