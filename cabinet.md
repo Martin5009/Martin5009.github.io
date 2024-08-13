@@ -44,7 +44,7 @@ Fig 4. Block diagram for the FPGA DE-DP14112 driver.
 
 # MCU-to-FPGA Communication Standard
 
-  To allow the MCU and FPGA to communicate over SPI, I defined the following 16-bit message format. Each message starts with an ID bit which contains the operation type. The purpose of the remaining bits varies depending on whether the operation is a write or a configuration command.
+  The MCU controls the LED display by sending messages to the FPGA over SPI. I defined the following 16-bit message format for MCU-FPGA communication. Each message starts with an ID bit which contains the operation type. The purpose of the remaining bits varies depending on whether the operation is a write or a configuration command.
 
 <p align="center">
   ID0 - B14 B13 B12 B11 B10 B9 B8 B7 B6 B5 B4 B3 B2 B1 B0
@@ -63,7 +63,7 @@ Write messages consist of position bits X[4:0] and Y[1:0], green LED control bit
 0 - R3 R2 R1 R0 - G3 G2 G1 G0 - Y1 Y0 - X4 X3 X2 X1 X0
 </p>
 
-As shown in Figure 5, the display is split into columns of four LEDs, where each LED in the column can be independently controlled. The write operation is used to control the LEDs in one of these columns, either by toggling them on/off or by changing their color. The position bits X[4:0] and Y[1:0] define the (x, y) location of this column, defining (0, 0) to be at the top left of the display. The color bits R[3:0] and G[3:0] toggle the red and green LEDs respectively on each column. 
+As shown in Figure 5, the display is split into columns of four LEDs, where each LED in the column can be independently controlled. The write operation is used to control the LEDs in one of these columns, either by toggling them on/off or by changing their color. The position bits X[4:0] and Y[1:0] define the (x, y) location of this column, defining (0, 0) to be at the top left of the display. The color bits R[3:0] and G[3:0] toggle the red and green LEDs respectively on each column. You might be wondering why I mandate that a single message must control four LEDs at once. The reason for this is in the way that the HT1632C LED matrix driver chips are structured. Each chip contains a display memory consisting of multiple registers and each register contains four bits, each of which corresponds to one LED in a column of four. A write operation may only write starting from bit zero of a given register.
 
 **X[4:0]: Control Location X**  
 These bits are used to define the x-coordinate location of the column to be controlled, defining x = 0 as the left edge of the display.
