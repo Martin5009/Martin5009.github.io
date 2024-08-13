@@ -29,4 +29,4 @@ Fig 2. Block diagram of the digital delay unit at the register transfer level
 
 Fig 3. Finite state machine showing the high-level behavior of the digital delay unit.
 
-_Updates on the first physical prototype coming as soon as I get the documentation written_
+_Updates on the first physical prototype coming as soon as I finish the documentation_
