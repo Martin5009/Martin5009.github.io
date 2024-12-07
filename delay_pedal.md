@@ -3,6 +3,7 @@ layout: page
 title: Digital Delay Pedal
 permalink: /delay_pedal/
 ---
+UPDATE: This project has been indefinitely suspended due to being destroyed in a house fire (everyone was unharmed).
 
 # Summary
   This ongoing project is my first practical venture into the field of digital signal processing. The goal is to design, build, and test a digital delay pedal with adjustable feedback and mix. I intend to use my ICE40UP5K FPGA from the arcade cabinet project as the digital audio processor, and separate ADC/DAC ICs to convert the audio signal to and from digital. Figure 1 shows a system-level block diagram of the planned design, where Km and Kf are the mix and feedback gains. Currently I have designed the digital delay unit at the register transfer level and verified its functionality using ModelSim. The next steps are to verify functionality in hardware, then start on the analog signal processing circuitry.
